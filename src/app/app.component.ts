@@ -1,10 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'showcase';
+export class AppComponent implements OnInit {
+  title='showcase';
+  ngOnInit() {
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  }
 }

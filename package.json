@@ -18,6 +18,8 @@
     "@angular/platform-browser": "^18.2.14",
     "@angular/platform-browser-dynamic": "^18.2.14",
     "@angular/router": "^18.2.14",
+    "aos": "^2.3.4",
+    "bootstrap": "^4.6.2",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.10"
@@ -26,6 +28,7 @@
     "@angular-devkit/build-angular": "^18.2.21",
     "@angular/cli": "~18.2.21",
     "@angular/compiler-cli": "^18.2.14",
+    "@types/aos": "^3.0.7",
     "@types/jasmine": "~4.0.0",
     "jasmine-core": "~4.3.0",
     "karma": "~6.4.0",
