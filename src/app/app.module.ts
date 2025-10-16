@@ -6,12 +6,12 @@ import { AppComponent } from './app.component';
 import { LandingComponent } from './components/landing/landing.component';
 @NgModule({
   declarations: [
+    AppComponent,
+    LandingComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    AppComponent,
-    LandingComponent
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
