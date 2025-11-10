@@ -1,0 +1,39 @@
+body {
+  font-family: 'Porsche Next', 'Helvetica Neue', sans-serif;
+  color: #111;
+}
+
+.hero h1 {
+  letter-spacing: 1px;
+}
+
+section {
+  max-width: 576px !important;
+  margin: 0 auto; /* center horizontally */
+  scroll-snap-align: start;
+
+}
+
+@media (max-width: 768px) {
+  section {
+    width: 100%;
+
+    video {
+      width: 100%;
+    }
+  }
+  
+}
+.gallery img {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.gallery img:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.sporty-text {
+  font-family: 'Porsche Next', 'Roboto', sans-serif;
+  font-style: italic;
+  letter-spacing: 0.5px;
+}

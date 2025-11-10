@@ -1,39 +1,204 @@
-body {
-  font-family: 'Porsche Next', 'Helvetica Neue', sans-serif;
-  color: #111;
+
+
+/* Hero Title Section */
+.hero-title {
+  text-align: center;
+  padding: 100px 20px 50px;
+  background: linear-gradient(135deg, #000 0%, #111 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.hero h1 {
-  letter-spacing: 1px;
+.main-title {
+  font-size: clamp(3rem, 8vw, 8rem);
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  margin: 0;
+  background: linear-gradient(45deg, #fff, #888);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 30px rgba(255,255,255,0.3);
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+      color: #fff;
+    font-family: 'Inter', sans-serif;
 }
 
-section {
-  max-width: 576px !important;
-  margin: 0 auto; /* center horizontally */
-  scroll-snap-align: start;
-
+.main-title:hover {
+  transform: translateY(-5px);
 }
 
-@media (max-width: 768px) {
-  section {
-    width: 100%;
+.subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  margin: 20px 0 0 0;
+  opacity: 0.8;
+  text-transform: uppercase;
+    color: #fff;
+font-family: 'Inter', sans-serif;
+}
 
-    video {
-      width: 100%;
-    }
+/* Scroll Indicator */
+.scroll-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+  animation: bounce 2s infinite;
+}
+
+.scroll-text {
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 15px;
+  opacity: 0.7;
+  text-transform: uppercase;
+      color: #fff;
+    font-family: 'Inter', sans-serif;
+}
+
+.scroll-arrow {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #fff;
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg);
+  opacity: 0.7;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
   }
-  
-}
-.gallery img {
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-.gallery img:hover {
-  transform: scale(1.05);
-  opacity: 0.9;
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
 }
 
-.sporty-text {
-  font-family: 'Porsche Next', 'Roboto', sans-serif;
-  font-style: italic;
-  letter-spacing: 0.5px;
+.stack-section {
+  position: relative;
+  padding: 200px 0 0 0; /* Increased top padding to push cards further down */
+  background-color: #0c0c0c;
+}
+
+/* The Cards */
+.stack-card {
+  position: sticky;
+  top: 80px;
+  width: 80%;
+  max-width: 700px;
+  margin: 0 auto 150px;
+  padding: 25px;
+  background: #101010;
+  border-radius: 20px;
+  box-shadow: 0 25px 55px rgba(0,0,0,0.45);
+  transform-origin: center center;
+  transition: transform 0.1s ease-out; /* Add smooth transition for transforms */
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Card images */
+.stack-card img {
+  width: 100%;
+  border-radius: 14px;
+  margin-top: 20px;
+}
+
+/* Video Section */
+.video-section {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #111 0%, #000 100%);
+  background-color: #0c0c0c;
+  text-align: center;
+}
+
+.video-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.video-title {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 700;
+  margin-bottom: 50px;
+  background: linear-gradient(45deg, #fff, #999);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.video-wrapper {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Play Button Overlay */
+.play-button-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.play-button-overlay:hover {
+  background: rgba(0,0,0,0.2);
+}
+
+.play-button {
+  width: 100px;
+  height: 100px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.play-button:hover {
+  background: rgba(255,255,255,1);
+  transform: scale(1.1);
+}
+
+.play-icon {
+  width: 0;
+  height: 0;
+  border-left: 25px solid #000;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  margin-left: 8px; /* Center the triangle */
+}
+
+.play-text {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  margin: 0;
+  opacity: 0.9;
 }
